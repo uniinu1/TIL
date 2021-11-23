@@ -1,10 +1,12 @@
 ## 사용법
 <code>
+    
     <script>
         $(document).ready(function(){
 
         });
     </script>
+    
 </code>
 
  .ready()는 DOM(Document Object Model)이 완전히 불러와지면 실행되는 Event입니다. 일반적으로 브라우저가 HTML을 보여주기 위해서는 먼저 문서 구조를 만들고 만들어진 문서 구조 위에 디자인을 입히는 형식을 취합니다. 이 과정에서 디자인이 입혀지지 않은 상태로 문서 구조가 만들어진 시점에 실행되는 Event가 바로. ready()입니다.
