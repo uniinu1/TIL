@@ -1,4 +1,4 @@
-## - 사용법
+## 사용법
 <code>
 
     <script>
@@ -13,7 +13,7 @@
 
 대부분의 브라우저에서는 DOMContentLoaded라는 .ready()와 비슷한 Event를 사용할 수 있습니다. 다만 여기에는 다른 점이 있습니다. 첫 번째. ready() Evnet는 DOMContentLoaded보다 먼저 실행됩니다. 두 번째 DOMContentLoaded는 Event가 한 번만 발생하며. ready() Evnet는 계속 발생합니다.
 
-## - $(documet).ready() 대신 $()를 사용하자
+## $(documet).ready() 대신 $()를 사용하자
 
 <code>
 
