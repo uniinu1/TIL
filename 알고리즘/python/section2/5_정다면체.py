@@ -33,4 +33,5 @@ for x, y in sorted_resultFin:
 resultFin2.sort()
 print(*resultFin2)
 
-# 
+# 정답이 다른 거라고 생각이 듦
+
