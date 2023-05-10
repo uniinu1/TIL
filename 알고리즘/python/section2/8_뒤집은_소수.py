@@ -46,4 +46,48 @@ for i in list2:
         print(i, end = " ")
     
 
-#
+#answer
+import sys
+sys.stdin=open("input.txt", "r")
+n=int(input())
+a=list(map(int, input().split()))
+
+def reverse(x):
+    res=0
+    while x>0:
+        t=x%10
+        res=res*10 +t
+        x=x//10
+        
+    return res
+
+def isPrime(x):
+    if x==1:
+        return False
+    # 약수는 1과 자기 자신 빼고 자신의 수에서 절반의 수에서만 약수가 존재
+    # 2가 이 문법에서 소수가 들어간다는 게 믿기지 
+    for i in range(2, x//2+1):
+       if x%i==0:
+           return False
+    else:
+        return True
+
+for x in a:
+    tmp = reverse(x)
+    if isPrime(tmp):
+        print(tmp, end = ' ')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
