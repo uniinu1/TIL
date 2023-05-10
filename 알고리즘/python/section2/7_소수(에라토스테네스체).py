@@ -20,5 +20,21 @@ for t in range(3, T+1):
 
 print(result)
 
-#시간 초과로 정답 맞추지 못함
+# => 시간 초과로 정답 맞추지 못함
+
 #Answer
+# 0으로 초기화된 리스트에서 0이면 소수이고, 아니면 소수가 아닌 것 구현
+
+import sys
+sys.stdin=open("input.txt", "r")
+n=int(input())
+ch=[0]*(n+1)
+cnt=0
+for i in range(2, n+1):
+    if ch[i]==0:
+        cnt += 1
+        for j in range(1, n+1, i):
+            ch[j]=1
+
+print(cnt)
+
