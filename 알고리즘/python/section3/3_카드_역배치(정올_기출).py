@@ -37,3 +37,19 @@
 ▣ 출력예제 1
 1 2 3 4 10 9 8 7 13 12 11 5 6 14 15 16 17 18 19 20
 '''
+
+# answer
+import sys
+sys.stdin = open("input.txt", "r")
+
+a=list(range(21))
+#_로 넣으면 변수에 넣는 것도 시간이 걸리니까 이렇게 하면 시간 소요가 적을 수 있음
+for _ in range(10):
+    s, e=map(int, input().split())
+    #(e - s +1)//2
+    for i in range((e - s + 1)//2):
+        a[s+i], a[e-i] = a[e-i], a[s+i]
+
+a.pop(0)
+for x in a:
+    print(x, end=' ')
