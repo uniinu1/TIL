@@ -1,6 +1,5 @@
-## 내가 푼 방식
-<pre>
-  <code>
+# my answer
+
 #k번째 약수 
 import sys 
 #sys.stdin = open("input.txt", "r")
@@ -16,5 +15,4 @@ for i in range(1, a[0] + 1):
             break
 else:
     print(-1)
-  </code>
-</pre>
+
