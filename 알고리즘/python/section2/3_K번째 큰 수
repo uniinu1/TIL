@@ -1,0 +1,38 @@
+#mine
+import sys
+#조합과 순열 쉽게 구할 수 있는 라이브러
+import itertools
+sys.stdin=open("input.txt", "rt")
+
+n, k=map(int, input().split())
+a=list(map(int, input().split()))
+
+b=[]
+
+result = list(itertools.permutations(a, 3))
+for v in result:
+    item = sum(v)
+    if item not in b:
+        b.append(item)
+
+
+b.sort(reverse=True)
+print(b[k-1])
+
+#정답
+import sys
+sys.stdin=open("input.txt", "rt")
+n, k=map(int, input().split())
+a=list(map(int, input().split()))
+
+#리스트는 중복되서 들어가므로, 중복을 제거하는 set 사용
+res=set()
+for i in range(n):
+    for j in range(i+1, n):
+        for m in range(j+1, n):
+            res.add(a[i]+a[j]+a[m])
+
+#set은 sort기능 없음
+res=list(res)
+res.sort(reverse=True)
+print(res[k-1])
