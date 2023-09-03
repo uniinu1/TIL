@@ -1,8 +1,8 @@
-#mine
+
 import sys
 #조합과 순열 쉽게 구할 수 있는 라이브러
 import itertools
-sys.stdin=open("input.txt", "rt")
+#sys.stdin=open("input.txt", "rt")
 
 n, k=map(int, input().split())
 a=list(map(int, input().split()))
@@ -19,9 +19,12 @@ for v in result:
 b.sort(reverse=True)
 print(b[k-1])
 
+# 5번에서 time limit 걸림
+
+'''
 #정답
 import sys
-sys.stdin=open("input.txt", "rt")
+#sys.stdin=open("input.txt", "rt")
 n, k=map(int, input().split())
 a=list(map(int, input().split()))
 
@@ -35,4 +38,4 @@ for i in range(n):
 #set은 sort기능 없음
 res=list(res)
 res.sort(reverse=True)
-print(res[k-1])
+print(res[k-1])'''
