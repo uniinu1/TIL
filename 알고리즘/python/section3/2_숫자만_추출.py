@@ -34,14 +34,13 @@ int_st = int(int_st)
 print(int_st)
 
 cnt = 0
-for i in range(2, int_st+1):
+for i in range(1, int_st+1):
     if int_st % i == 0:
         cnt += 1
         print(i)
 
 print(cnt)
 
-# 약수 개수가 안 맞음,,(약수는 1 포함시켜야 하는데 제외시켜버려서!)
 
 # answer
 import sys
@@ -51,11 +50,11 @@ s=input()
 res=0
 for x in s:
     if x.isdecimal():
-        # 문자열을 int 숫자로 만들 수 있는 방
+        # 문자열을 int 숫자로 만들 수 있는 방법
         res=res*10+int(x)
 cnt=0
 print(res)
-for i in rage(1, res +1):
+for i in range(1, res +1):
     if res %i == 0:
         cnt+=1
 print(cnt)
