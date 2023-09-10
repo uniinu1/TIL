@@ -9,6 +9,7 @@ import sys
 T = int(input())
 a = list(map(int, input().split()))
 list = []
+
 def digit_sum(v):
     answer = 0
     for n in str(v):
@@ -32,6 +33,7 @@ a = list(map(int, input().split()))
 def digit_sum(x):
     sum = 0
     while x > 0:
+        #125, 12, 1
         sum+=x%10
         x=x//10
 
