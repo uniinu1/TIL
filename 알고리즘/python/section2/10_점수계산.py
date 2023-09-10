@@ -20,7 +20,6 @@ count_s = 0
 for i in list:
     if i == 0:
         count_s = 0
-        continue
     elif i == 1:
         score = score + count_s + 1
         count_s += 1
