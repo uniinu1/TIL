@@ -1,22 +1,27 @@
 #정답
 import sys
+
 sys.stdin = open("input.txt", "r")
 
 n = int(input())
-a = [list(map(int, input().split())) for _ in range(n) ]
-res=0
-s=e=n//2
-for i in range(n):
-    for j in range(s, e+1):
-        res += a[i][j]
-    if i < n//2:
-        s-=1
-        e+=1
-    else:
-        s+=1
-        e-=1
+ql = [list(map(int, input().split())) for _ in range(n)]
 
-print(res)
+result = 0
+s = n // 2
+e = n // 2
+
+for i in range(n):
+    for b in range(s, e+1):
+        print("i : "+str(i)+ " b : "+str(b))
+        print(ql[i][b])
+        result += ql[i][b]
+
+    if i < n // 2:
+        s -= 1
+        e += 1
+    else:
+        s += 1
+        e -= 1
 
 #my answer
 import sys
@@ -38,7 +43,5 @@ for i in range(n):
             elif(n != 1):
                 a
 
-2 5 // 2
-1 2 3
-0 1 2 3 4
+# 결과 x
 
