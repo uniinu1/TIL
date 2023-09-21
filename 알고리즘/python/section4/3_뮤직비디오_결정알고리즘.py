@@ -19,6 +19,9 @@ def Count(capacity):
 n, m=map(int, input().split())
 Music=list(map(int, input().split()))
 
+
+# 반례 위해서 집어넣음
+# 노래들 중에서 가장 긴 노래를 담을 수 있는 용량은 가지고 있어야 함 
 maxx=max(Music)
 lt=1
 rt=sum(Music)
@@ -32,3 +35,9 @@ while lt<=rt:
         lt=mid+1
 print(res)
 
+# 위의 코드는 반례가 있었음
+"""
+9 9 
+1 2 3 4 5 6 7 8 9
+가 입력이 되었을 때
+"""
