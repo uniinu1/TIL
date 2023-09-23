@@ -90,3 +90,39 @@ for i in range(n):
         s-=1
         e+=1
 print(res)
+
+
+#my answer 2
+import sys
+sys.stdid = open("input.txt", "rt")
+
+n = int(input())
+listGam = [list(map(int, input().split())) for i in range(n)]
+qn = int(input())
+exit()
+
+for i in range(qn):
+    s, d, num = map(int, input().split())
+    if d == 0:
+        #왼쪽으로 돌 때
+        for a in range(num):
+            listGam[s-1].append(listGam[s - 1].pop(0))
+    else:
+        #오른쪽으로 돌 때
+        for a in range(num):
+            listGam[s-1].insert(0, listGam[s - 1].pop())
+
+res=0
+s=0
+e=n-1
+for i in range(n):
+    for j in range(s, e+1):
+        res+=a[i][j]
+    if i<n//2:
+        s+=1
+        e-=1
+    else:
+        s-=1
+        e+=1
+print(res)
+=> 안 돌아감,,,
