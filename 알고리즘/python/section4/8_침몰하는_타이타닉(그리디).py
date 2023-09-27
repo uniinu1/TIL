@@ -1,42 +1,34 @@
-
+'''
 # my answer
-#창고 정리
-# 처음 든 생각 : 배열에 넣고 max, min 함수 이용해서 하나씩 하나씩 돌면 풀 수는 있는데, 조정 횟수에 따라 시간이 많이 걸릴 수 있겠다
-
 import sys
-#sys.stdin=open("input.txt", "r")
-s=list(map(int, input().split()))
+sys.stdin=open("D:\강의\파이썬 알고리즘 문제풀이(코딩테스트 대비)\code\section4\input_6.txt", "r")
+n, weight = map(int, input().split())
 p=list(map(int, input().split()))
 
 p.sort(reverse=True)
 
 cnt = 0
-mx = 0
-n=140
 listT = []
-for i in range(s[0]):
-    #최대 무게에서 한 사람분 뺌
-    n = n - p[i]
-    #인원 수 체크
-    mx += 1
-    #listT.append(p[i])
-    if mx == 2 and n >= 0:
+minA = min(p)
+while p:
+    print(p)
+    if p[0] + minA <= weight:
         cnt += 1
-        n = 140
-        mx = 0
-        #listT.append("/")
-    elif n < 0:
+        minIndex = p.index(minA)
+        print(minIndex)
+        p.pop(0)
+        p.pop(minIndex)
+        if p:
+            minA = min(p)
+    else:
         cnt += 1
-        n = 140 - p[i]
-        mx = 1
-        #listT.append("-")
-
-
+        p.pop(0)
 
 #print(listT)
 print(cnt)
-# 이 문제는 정답이 맞는데 다른 예시는 정답이 아니라고 나옴
+# case3, 4 에러
 
+'''
 #answer
 #승객의 몸무게를 오름차순
 #가장 가벼운 사람과 가장 무거운 사람을 더하여 확인
@@ -69,5 +61,3 @@ while p:
         p.pop()
         cnt+=1
 print(cnt)
-
-
